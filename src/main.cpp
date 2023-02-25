@@ -17,6 +17,9 @@ int main(){
     window.setFramerateLimit(config["Game"]["framerate"].as<int>());
     window.setKeyRepeatEnabled(false);
     sf::Color backgroundColor(config["Background"]["r"].as<int>(), config["Background"]["g"].as<int>(), config["Background"]["b"].as<int>());
+    sf::Image icon;
+    icon.loadFromFile("assets/icon.png");
+    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
     ttr::InputManager input;
     ttr::TetrisManager manager(&config, &window, &input);
