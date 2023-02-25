@@ -118,16 +118,16 @@ void ttr::TetrisManager::update(){
         }
     }
     // Rotation
-    if(inputmgr->is_pressed_down(sf::Keyboard::Z)){
+    if(inputmgr->is_pressed_down(sf::Keyboard::Z) && !block_movement){
         current_block->rotate_left();
         current_block->apply_SRS(false);
     }
-    if(inputmgr->is_pressed_down(sf::Keyboard::X)){
+    if(inputmgr->is_pressed_down(sf::Keyboard::X) && !block_movement){
         current_block->rotate_right();
         current_block->apply_SRS(true);
     }
     // Hold
-    if(inputmgr->is_pressed_down(sf::Keyboard::Space)){
+    if(inputmgr->is_pressed_down(sf::Keyboard::Space) && !block_movement){
         hold();
     }
     // Instant drop

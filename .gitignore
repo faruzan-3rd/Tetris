@@ -1,1 +1,12 @@
 .vscode/
+.vs/
+bin/
+Debug/
+lib/
+x64/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.o
+app
