@@ -1,0 +1,110 @@
+Title: Tetris
+
+Window:
+  width: 600
+  height: 600
+
+Grid:
+  width: 10
+  height: 21
+  line_thickness: 1
+  square_size: 28
+  color: [130, 130, 130]
+  position: [160, -24]
+
+Background:
+  r: 38
+  g: 38
+  b: 38
+
+Sheet:
+  name: assets/tetris_sprites.png
+  size: 7
+  scale: 4
+  alpha: 255
+
+  Sprites:
+    Empty: [0, 0]
+    Yellow: [233, 333]
+    Light_blue: [233, 18]
+    Purple: [2, 85]
+    Orange: [233, 298]
+    Dark_blue: [2, 295]
+    Green: [2, 50]
+    Red: [233, 263]
+    Ghost: [233, 228]
+
+Game:
+  tick_interval: 0.8
+  interval_modifier: 0.1
+  input_clock: 0.08
+  framerate: 180
+
+  enable_shadow: 1
+
+UI:
+  next_display_max: 6
+  font: assets/mariomaker.ttf
+  display_block_scale: 2
+  block_interval: 50
+  block_offset: [10, 10]
+  text_size: 30
+
+  hold_txt_color: [15, 200, 130]
+  hold_txt_position: [45, 75]
+
+  hold_box: [40, 120, 80, 50]
+  hold_box_color: [130, 130, 130]
+  hold_box_thickness: 3
+
+  next_txt_color: [15, 200, 130]
+  next_txt_position: [475, 75]
+
+  next_box: [475, 120, 80, 300]
+  next_box_color: [130, 130, 130]
+  next_box_thickness: 3
+
+  score_label_color: [15, 200, 130]
+  score_label_position: [20, 230]
+
+  score_txt_color: [200, 200, 200]
+  score_txt_position: [20, 270]
+  score_txt_size: 20
+
+  score_digits: 10
+
+  Blocks:
+    scale: 2
+    alpha: 255
+
+    Sprites:
+      Empty: [0, 0, 7, 7]
+      Yellow: [233, 315, 15, 15]
+      Light_blue: [233, 0, 31, 7]
+      Purple: [187, 70, 23, 15]
+      Orange: [279, 298, 23, 15]
+      Dark_blue: [48, 18, 23, 15]
+      Green: [186, 53, 23, 15]
+      Red: [344, 263, 23, 15]
+
+Shadow:
+  size: 7
+  scale: 4
+  alpha: 90
+
+  Sprites:
+    Empty: [0, 0]
+    Yellow: [325, 333]
+    Light_blue: [325, 18]
+    Purple: [325, 263]
+    Orange: [325, 228]
+    Dark_blue: [325, 298]
+    Green: [325, 53]
+    Red: [333, 263]
+    Ghost: [233, 228]
+
+Audio:
+  bgm: assets/tetris.ogg
+  hard_drop: assets/harddrop.ogg
+  soft_drop: assets/piecetouchdown.ogg
+  clear: assets/lineclear.ogg
