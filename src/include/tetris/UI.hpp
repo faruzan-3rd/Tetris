@@ -12,6 +12,7 @@
 #include "tetris/enum.hpp"
 #include "tetris/blocks.hpp"
 #include "tetris/assets.hpp"
+#include "wastils/UI.hpp"
 
 
 namespace ttr{
@@ -21,12 +22,8 @@ namespace ttr{
         YAML::Node config;
         sf::RenderWindow* window;
 
-        // This shit is a huge mess
-        sf::Font font_fuckyou;
-        sf::Text hold_txt, next_txt, score_label, score_txt;
-        sf::Color hold_color, next_color, score_label_color, score_color;
-        sf::RectangleShape hold_box, next_box;
-        sf::Text start, gameover;
+        was::UIScheme scheme;
+        was::UIScheme start, gameover;
 
         const long* score;
         const ttr::BlockType* hold;
@@ -36,7 +33,6 @@ namespace ttr{
         int standard_block_size;
         int standard_block_scale;
         int block_interval;
-        int text_size;
         float display_block_scale;
         sf::Vector2f block_offset;
         int score_digits;

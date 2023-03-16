@@ -1,7 +1,7 @@
-#include "tetris/config.hpp"
+#include "wastils/config.hpp"
 
 
-int ttr::load_config(YAML::Node& node, const std::string& filename){
+int was::load_config(YAML::Node& node, const std::string& filename){
     try {
         node = YAML::LoadFile(filename);
         return 0;

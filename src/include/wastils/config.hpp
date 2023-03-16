@@ -4,7 +4,7 @@
 #include "yaml-cpp/yaml.h"
 #include <iostream>
 
-namespace ttr{
+namespace was{
 
     int load_config(YAML::Node& node, const std::string& filename);
 

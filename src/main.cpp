@@ -1,12 +1,13 @@
 #include "yaml-cpp/yaml.h"
 #include "SFML/Graphics.hpp"
 #include "tetris/tetris.hpp"
-#include "tetris/config.hpp"
+#include "wastils/config.hpp"
 
 
 int main(){
+    std::cout << "Welcome to tetris! " << std::endl;
     YAML::Node config;
-    if(ttr::load_config(config, "assets/config.yaml") == 1){
+    if(was::load_config(config, "assets/config.yaml") == 1){
         return 1;
     }
 
@@ -14,6 +15,9 @@ int main(){
     int sc_w = config["Window"]["width"].as<int>(), sc_h = config["Window"]["height"].as<int>();
     std::string title = config["Title"].as<std::string>();
     sf::RenderWindow window(sf::VideoMode(sc_w, sc_h), title, sf::Style::Titlebar | sf::Style::Close);
+
+    std::cout << "Window generated" << std::endl;
+
     window.setFramerateLimit(config["Game"]["framerate"].as<int>());
     window.setKeyRepeatEnabled(false);
     sf::Color backgroundColor(config["Background"]["r"].as<int>(), config["Background"]["g"].as<int>(), config["Background"]["b"].as<int>());
@@ -23,6 +27,8 @@ int main(){
 
     ttr::InputManager input;
     ttr::TetrisManager manager(&config, &window, &input);
+
+    std::cout << "Loading finished" << std::endl;
 
     while (window.isOpen())
     {

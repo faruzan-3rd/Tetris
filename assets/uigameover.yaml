@@ -1,0 +1,10 @@
+
+
+scheme:
+  - type: text
+    name: game_over_label
+    text: Game Over
+    position: [250, 50]
+    font: assets/mariomaker.ttf
+    color: [250, 250, 250]
+    size: 35

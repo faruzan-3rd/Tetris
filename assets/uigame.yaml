@@ -1,0 +1,58 @@
+
+define:
+  - &mariomaker assets/mariomaker.ttf
+
+  - &text_color [15, 200, 130]
+  - &box_color [130, 130, 130]
+
+  - &size 30
+  - &box_thickness 3
+
+scheme:
+  - type: text
+    name: score_label
+    text: Score
+    position: [20, 230]
+    font: *mariomaker
+    color: *text_color
+    size: *size
+
+  - type: text
+    name: hold
+    text: Hold
+    position: [45, 75]
+    font: *mariomaker
+    color: *text_color
+    size: *size
+  
+  - type: text
+    name: next
+    text: Next
+    position: [475, 75]
+    font: *mariomaker
+    color: *text_color
+    size: *size
+  
+  - type: text
+    name: score
+    text: "00000"
+    position: [20, 270]
+    font: *mariomaker
+    color: [200, 200, 200]
+    size: 20
+
+  - type: rectangle
+    name: hold_box
+    position: [40, 120]
+    width: 80
+    height: 50
+    thickness: *box_thickness
+    color: *box_color
+
+  - type: rectangle
+    name: next_box
+    position: [475, 120]
+    width: 80
+    height: 300
+    thickness: *box_thickness
+    color: *box_color

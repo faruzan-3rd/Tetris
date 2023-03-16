@@ -1,0 +1,10 @@
+
+
+scheme:
+  - type: text
+    name: start_label
+    text: "Press enter to start"
+    position: [200, 50]
+    font: assets/mariomaker.ttf
+    color: [250, 250, 250]
+    size: 35

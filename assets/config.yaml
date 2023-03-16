@@ -43,33 +43,13 @@ Game:
   enable_shadow: 1
 
 UI:
+  scheme: assets/uigame.yaml
+  start: assets/uistart.yaml
+  gameover: assets/uigameover.yaml
   next_display_max: 6
-  font: assets/mariomaker.ttf
   display_block_scale: 2
   block_interval: 50
   block_offset: [10, 10]
-  text_size: 30
-
-  hold_txt_color: [15, 200, 130]
-  hold_txt_position: [45, 75]
-
-  hold_box: [40, 120, 80, 50]
-  hold_box_color: [130, 130, 130]
-  hold_box_thickness: 3
-
-  next_txt_color: [15, 200, 130]
-  next_txt_position: [475, 75]
-
-  next_box: [475, 120, 80, 300]
-  next_box_color: [130, 130, 130]
-  next_box_thickness: 3
-
-  score_label_color: [15, 200, 130]
-  score_label_position: [20, 230]
-
-  score_txt_color: [200, 200, 200]
-  score_txt_position: [20, 270]
-  score_txt_size: 20
 
   score_digits: 10
 
